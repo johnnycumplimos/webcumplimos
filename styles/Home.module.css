@@ -1,0 +1,310 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero{
+  position: relative;
+  background-image: url('../public/images/hero-home.jpg');
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 35vh;
+  top: 0;
+  left:0;
+}
+
+.hero_text_container{
+  position: absolute;
+  bottom: 0;
+  margin: 50px 10px;
+}
+
+.hero_text{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+
+.skills{
+  position: relative;
+  top:-30px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  row-gap: 20px;
+  grid-template-columns: 300px;
+  grid-template-rows: repeat(3,300px);
+}
+
+
+.card{
+  position: relative;
+  box-shadow: #496EB6 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.semiCircle[color="blue"]{
+  position: absolute;
+  top:0;
+  right: 0;
+  color:white;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 20%;
+  border-radius: 50% 0 0 50%;
+  background-color: #496EB6;
+}
+
+.semiCircle[color="orange"]{
+  position: absolute;
+  top:0;
+  right: 0;
+  color:white;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 20%;
+  border-radius: 50% 0 0 50%;
+  background-color: rgb(235, 94, 41);
+}
+
+.titleCardIA[color="blue"]{
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-align: center;
+  width: 70%;
+  border-bottom: 2px solid #496EB6 ;
+}
+
+.titleCardIA[color="orange"]{
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-align: center;
+  width: 70%;
+  border-bottom: 2px solid rgb(235, 94, 41);
+}
+
+.contentCard{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.containerConocenos{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.line{
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  margin: 0px 5px;
+}
+
+.line::before{
+  content:'';
+  position: absolute;
+  top:50%;
+  left:0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+.cardSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.feesDetails{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.titleHealth{
+  margin:0;
+  width: 100%;
+  padding:0;
+  font-weight:bold;
+  text-align: center;
+  color: #496EB6;
+}
+
+.helthDetails{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 0.8rem;
+  margin-left: 20px;
+}
+
+.titleFees{
+  margin:0;
+  padding:0;
+  font-weight: bold;
+  text-align:center;
+  color: rgb(235, 94, 41);
+}
+
+.sectionSections{
+  background-image: url('../public/images/waves.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button_solutions{
+  margin-top:20px;
+  width:90%;
+  border:none;
+  text-align:center;
+  height:50px;
+  border-radius:30px;
+  color:white;
+  font-weight:solid;
+  cursor: pointer;
+}
+.containerImages{
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.image_fees{
+  transform: translateX(-10%);
+  border-radius:0px 20px 20px 0px;
+}
+
+.image_health{
+  border-radius:20px 0px 0px 20px;
+  transform: translateX(10%);
+}
+
+
+
+
+@media (min-width:950px) {
+  .skills{
+    position: relative;
+    top:-90px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    column-gap: 20px;
+    grid-template-rows: 30vw;
+    grid-template-columns: repeat(3,30vw);
+  }
+
+  .hero{
+    height: 90vh;
+  }
+
+  .hero_text_container{
+    margin: 160px 10px;
+  }
+
+  .hero_text{
+    font-size: 2rem;
+  }
+
+  .hero_text_secundary{
+    font-size: 2rem;
+  }
+
+  .feesDetails{
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+  }
+
+  .helthDetails{
+
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+  }
+  .titleHealth{
+    font-size: 3rem;
+  }
+  .titleFees{
+    font-size: 3rem;
+  }
+
+  .button_solutions{
+    width:50%;
+  }
+
+  .cardSection{
+    max-height: 50vh;
+  }
+
+  .image_fees{
+    width: 100%;
+    height: 100%;
+    border-radius:0px 20px 20px 0px;
+    transform:translatex(-10%);
+  }
+  
+  .image_health{
+    width: 100%;
+    height: 100%;
+    border-radius:20px 0px 0px 20px;
+    transform:translatex(10%);
+  }
+  
+  .containerConocenos{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  
+}
+
+@media (min-width:1650px) {
+
+   .hero_text_container{
+    margin: 250px 10px;
+  }
+
+  .hero_text{
+    font-size: 3rem;
+  }
+}
