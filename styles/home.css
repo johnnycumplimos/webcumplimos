@@ -9,29 +9,32 @@
 
 .hero{
   position: relative;
-  background-image: url('../public/images/hero-home.jpg');
+  background-image: url('../images/hero-home.jpg');
   background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 0;
-  margin: 0;
   width: 100%;
-  height: 35vh;
-  top: 0;
-  left:0;
+  height: 40vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .hero_text_container{
-  position: absolute;
-  bottom: 0;
-  margin: 50px 10px;
+  margin-top: 10vh;
+  margin-left: 20px;
 }
 
 .hero_text{
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 
+.hero_text_secundary {
+  font-size: 1.6rem;
+  font-weight: 200;
+}
 
 
 .skills{
@@ -47,10 +50,10 @@
   grid-template-rows: repeat(3,300px);
 }
 
-
-.card{
+.card-skill {
   position: relative;
-  box-shadow: #496EB6 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  box-shadow: #496eb6 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   width: 100%;
   height: 100%;
   background-color: white;
@@ -59,11 +62,16 @@
   align-items: center;
 }
 
-.semiCircle[color="blue"]{
+.card-skill > img {
+  width: 60px;
+  height: 60px;
+}
+
+.semiCircle[color="blue"] {
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
-  color:white;
+  color: white;
   font-weight: bold;
   font-size: 1rem;
   text-align: center;
@@ -73,14 +81,14 @@
   width: 20%;
   height: 20%;
   border-radius: 50% 0 0 50%;
-  background-color: #496EB6;
+  background-color: #496eb6;
 }
 
-.semiCircle[color="orange"]{
+.semiCircle[color="orange"] {
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
-  color:white;
+  color: white;
   font-weight: bold;
   font-size: 1rem;
   text-align: center;
@@ -93,26 +101,27 @@
   background-color: rgb(235, 94, 41);
 }
 
-.titleCardIA[color="blue"]{
+.titleCardIA[color="blue"] {
   font-weight: bold;
   font-size: 1.8rem;
   text-align: center;
   width: 70%;
-  border-bottom: 2px solid #496EB6 ;
+  border-bottom: 2px solid #496eb6;
 }
 
-.titleCardIA[color="orange"]{
+.titleCardIA[color="orange"] {
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   text-align: center;
   width: 70%;
   border-bottom: 2px solid rgb(235, 94, 41);
 }
 
-.contentCard{
+.contentCard {
   margin-top: 20px;
   text-align: center;
   font-size: 1.4rem;
+  font-weight: 300;
 }
 
 .containerConocenos{
@@ -120,6 +129,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.containerConocenos span {
+  font-size: 1.5rem;
+  font-weight: 200;
 }
 
 .line{
@@ -141,9 +155,8 @@
 
 .cardSection{
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .feesDetails{
@@ -152,25 +165,17 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  align-items: center;
 }
 
-.titleHealth{
-  margin:0;
+
+.title_fee {
+  height: 120px;
   width: 100%;
-  padding:0;
-  font-weight:bold;
-  text-align: center;
-  color: #496EB6;
-}
-
-.helthDetails{
-  margin: 0;
-  padding: 0;
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  font-size: 0.8rem;
-  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .titleFees{
@@ -178,43 +183,73 @@
   padding:0;
   font-weight: bold;
   text-align:center;
+  font-size: 3rem;
+}
+
+.titleFees[color="blue"] {
+  color: #496EB6;
+}
+
+.titleFees[color="white"] {
+  color: #fff;
+}
+
+.titleFees[color="orange"] {
   color: rgb(235, 94, 41);
 }
 
+img.image_fees {
+  position: absolute;
+  height: 120px;
+  width: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.bg_img_fee {
+  position: absolute;
+  height: 120px;
+  width: 100%;
+  z-index: -1;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.feesDetails_span {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px 60px;
+}
+
 .sectionSections{
-  background-image: url('../public/images/waves.svg');
+  background-image: url('../images/waves_opacity.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .button_solutions{
-  margin-top:20px;
-  width:90%;
-  border:none;
-  text-align:center;
-  height:50px;
-  border-radius:30px;
-  color:white;
-  font-weight:solid;
+  margin-top: 20px;
+  width: 90%;
+  border: none;
+  text-align: center;
+  border-radius: 30px;
+  color: white;
+  font-weight: light;
   cursor: pointer;
+  font-size: 1.2rem;
+  padding: 10px 0;
 }
+
 .containerImages{
   width: 100%;
   height: 100%;
- 
 }
 
-.image_fees{
-  transform: translateX(-10%);
-  border-radius:0px 20px 20px 0px;
+.image_fees_desktop{
+  display: none;
 }
-
-.image_health{
-  border-radius:20px 0px 0px 20px;
-  transform: translateX(10%);
-}
-
-
 
 
 @media (min-width:950px) {
@@ -232,19 +267,20 @@
   }
 
   .hero{
-    height: 90vh;
+    height: 60vh;
   }
 
   .hero_text_container{
-    margin: 160px 10px;
+    max-width: 60vw;
+    margin-right: 100px;
   }
 
-  .hero_text{
-    font-size: 2rem;
+  .hero_text {
+    font-size: 3rem;
   }
 
   .hero_text_secundary{
-    font-size: 2rem;
+    font-size: 2.6rem;
   }
 
   .feesDetails{
@@ -296,15 +332,43 @@
     margin-bottom: 50px;
   }
   
-}
-
-@media (min-width:1650px) {
-
-   .hero_text_container{
-    margin: 250px 10px;
+  .cardSection {
+    display: flex;
+    justify-content: space-between;
   }
 
-  .hero_text{
-    font-size: 3rem;
+  .feesDetails {
+    width: 55%;
+  }
+
+  span.feesDetails_span {
+    font-size: 2rem;
+    font-weight: 100;
+    color: #6a6a6a;
+  }
+
+  .image_fees_mobile, .bg_img_fee {
+    display: none;
+  }
+
+  .image_fees_desktop {
+    display: block;
+    width: 35%;
+    height: 450px;
+  }
+
+  .image_fees_desktop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  .image_fees_desktop_invers img {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
 }

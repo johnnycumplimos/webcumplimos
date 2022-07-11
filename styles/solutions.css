@@ -1,0 +1,295 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  background-image: url("../images/doctor.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.hero_text_container {
+  margin-top: 10vh;
+  margin-right: 20px;
+  text-align: right;
+}
+
+.hero_text {
+  text-align: right;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.hero_text_secundary {
+  text-align: right;
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+
+.principal_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px 0px;
+}
+
+.principal_legend {
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 20px;
+}
+
+.principal_card_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  flex-wrap: wrap;
+  margin: 10px 0px;
+}
+
+.principal_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  max-width: 250px;
+  height: 40vh;
+  position: relative;
+  margin: 10px;
+  padding: 0 10px;
+}
+
+.principal_card > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.principal_card .bg_blue {
+  background-color: #496eb6;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.principal_card h4 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.cardSection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.feesDetails {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.title_fee {
+  height: 130px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.titleFees {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.titleFees[color="blue"] {
+  color: #496eb6;
+}
+
+.titleFees[color="white"] {
+  color: #fff;
+}
+
+.titleFees[color="orange"] {
+  color: rgb(235, 94, 41);
+}
+
+.image_fees_desktop {
+  display: none;
+}
+
+img.image_fees {
+  position: absolute;
+  height: 130px;
+  width: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.bg_img_fee {
+  position: absolute;
+  height: 130px;
+  width: 100%;
+  z-index: -1;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.feesDetails_span {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px 60px;
+  list-style-type: circle;
+  color: #496eb6;
+}
+
+.feesDetails_span li {
+  margin-bottom: 15px;
+}
+
+.feesDetails_span li span {
+  color: black;
+  font-size: 1rem;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+
+.sectionSections {
+  background-image: url("../images/waves_opacity.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+.button_solutions {
+  margin-top: 20px;
+  width: 90%;
+  border: none;
+  text-align: center;
+  border-radius: 30px;
+  color: white;
+  font-weight: light;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 10px 0;
+}
+
+.containerImages {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 950px){
+  .hero{
+    height: 60vh;
+  }
+
+  .hero_text_container{
+    max-width: 45vw;
+    margin-right: 100px;
+  }
+
+  .hero_text {
+    font-size: 3rem;
+  }
+
+  .hero_text_secundary{
+    font-size: 2.6rem;
+  }
+
+  .principal_legend{
+    font-size: 2.2rem;
+    padding: 20px 150px;
+    font-weight: 100;
+  }
+
+  .image_fees {
+    position: relative;
+    width: 50%;
+  }
+
+  .image_fees_mobile, .bg_img_fee {
+    display: none;
+  }
+
+  .titleFees {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #496eb6 !important;
+  }
+
+  .cardSection {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .feesDetails {
+    width: 55%;
+  }
+
+  .feesDetails_span li span {
+    font-size: 2rem;
+    font-weight: 100;
+    color: #6a6a6a;
+  }
+
+  .image_fees_desktop {
+    display: block;
+    width: 35%;
+    height: 600px;
+  }
+
+  .image_fees_desktop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  .image_fees_desktop_invers img {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}

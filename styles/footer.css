@@ -1,4 +1,4 @@
-.container{
+.container_footer{
     position: relative;
     width: 100%;
     display: grid;
@@ -9,6 +9,12 @@
     margin-bottom: 30px;
     padding-top: 10px;
     z-index: 99;
+    padding: 10px;
+}
+
+.icon-footer {
+  width: 200px;
+  height: 150px;
 }
 
 .container::before{
@@ -90,7 +96,7 @@
     }
 
     .textFooter{
-        font-size: 1.1rem;
+        font-size: .8rem;
     }
 }
 
