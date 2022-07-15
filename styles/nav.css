@@ -1,0 +1,151 @@
+.nav_container{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.icon_cumplimos{
+    width:280px;
+    height:90px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.icon_cumplimos_img {
+    object-fit: contain;
+}
+
+.menu_icon{
+    width: 40px;
+    height: 40px;
+    margin: 0px 10px;
+}
+
+.menu_icon > img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu_list{
+    margin: 0;
+    padding:0;
+    position: absolute;
+    top:0;
+    transform:translateX(110vw);
+    z-index: 2;
+    list-style-type: none;
+    width: 100%;
+    height:100vh;
+    background-color: #496EB6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    transition: 0.5s;
+}
+
+.menu_list.activate{
+    transform: translateX(0);
+    transition: 1s;
+}
+
+.menu_item{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: solid;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid white;
+}
+
+.menu_item:hover{
+    background-color: rgb(134, 156, 204);
+}
+.a_inicio{
+    color: white;
+}
+
+.menu_close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+}
+
+.menu_close > img {
+    width: 40px;
+    height: 40px;
+}
+
+.scrollEffect{
+    background-color: blue;
+}
+
+@media (min-width:900px) {
+    .menu_list.activate{
+        transform: translateX(0);
+        transition: 0s;
+    }
+    .menu_list{
+        border: transparent !important;
+        position: relative;
+        height: 90px;
+        color: black;
+        background-color: transparent;
+        flex-direction: row;
+        justify-content: space-around;
+        transform: translateX(0);
+    }
+
+    .menu_item{
+        width: fit-content;
+        position: relative;
+        border:none;
+    }
+    .menu_item::after{
+        content: '';
+        position: absolute;
+        left:0;
+        bottom:10px;
+        width: 0%;
+        height: 3px;
+        background-color: #EE7128;
+    }
+    .menu_item:hover{
+        background-color: transparent;
+    }
+
+    .menu_item:hover:after{
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    .menu_icon{
+        visibility: hidden;
+    }
+
+    .menu_close{
+        visibility: hidden;
+    }
+
+    .a_inicio{
+        color: black;
+    }
+    
+}
+
