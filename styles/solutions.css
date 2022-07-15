@@ -110,7 +110,7 @@
 .cardSection {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
 }
 
 .feesDetails {
@@ -227,6 +227,8 @@ img.image_fees {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  margin-bottom: 100px;
 }
 
 .section_video > h4 {

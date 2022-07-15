@@ -261,9 +261,14 @@ img.image_fees {
     align-items: center;
     align-content: center;
     justify-items: center;
-    column-gap: 20px;
-    grid-template-rows: 30vw;
+    column-gap: 0px;
+    grid-template-rows: 400px;
     grid-template-columns: repeat(3,30vw);
+  }
+
+  .card-skill {
+    max-width: 320px;
+    max-height: 350px;
   }
 
   .hero{
@@ -290,7 +295,6 @@ img.image_fees {
   }
 
   .helthDetails{
-
     justify-content: center;
     align-items: center;
     font-size: 2rem;
@@ -304,10 +308,6 @@ img.image_fees {
 
   .button_solutions{
     width:50%;
-  }
-
-  .cardSection{
-    max-height: 50vh;
   }
 
   .image_fees{
